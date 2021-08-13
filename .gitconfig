@@ -1,0 +1,7 @@
+[user]
+	email = ricsanfre@gmail.com
+	name = ricsanfre
+[color]
+	ui = auto
+[credential]
+	helper = /home/ricardo/git_credential_gpgpat
