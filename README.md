@@ -115,3 +115,14 @@ Execute the script and checks that is outputing the unencrypted password
 
     git config --global credential.helper $HOME/git_credential_gpgpat
     
+git will try to get the credentials from this helper and it would use it for every push/pull/clone.
+
+
+### Step 4. Add GPG_TTY env variable to user profile
+
+Since gpg passphrase need to be prompted to the same tty session where git commands are executed `GPG_TTY` variable need to be set to the actual tty session opened. This will avoid messages of type "gpg: public key decryption failed: Inappropriate ioctl for device":
+
+Add to `.bashrc`
+
+    export GPG_TTY=$(tty)
+    
